@@ -10,6 +10,7 @@ import './style/Footer.css'
 import { Navbar2 } from './components/Navbar2'
 import './style/nav2.css'
 import { Header } from './components/header'
+import './style/header.css'
 
 function App() {
   const [count, setCount] = useState(0)

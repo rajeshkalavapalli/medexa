@@ -1,56 +1,77 @@
-let my_adress = [{
-    "Float": 101,
-    "name": "Zolo vibe",
-    "street": "perungudi",
-    "landmark": "near honda showroom",
-    "state": "chennai",
-    "phone":`Contact: 9866667073`
+let my_adress = [
+  {
+    Float: 101,
+    name: "Zolo vibe",
+    street: "Perungudi",
+    landmark: "Near Honda showroom",
+    state: "Chennai",
+    phone: "Contact: 9866667073",
+  },
+];
 
+let services = [
+  "General Physician",
+  "Pediatrician",
+  "Dermatologist",
+  "Gynecologist & Obstetrician",
+  "Cardiologist",
+  "Ophthalmologist",
+  "Neurologist",
+  "Gastroenterologist",
+];
 
-}]
-
-let services = ["General Physician", "Pediatrician", "Dermatologist", "Gynecologist & Obstetrician", "Cardiologist", "Cardiologist", "Ophthalmologist", "Neurologist", "Gastroenterologist"]
-
-
-let usefull_links = ["Return","latest News", "Our Sitemap", "Contact Us", "privacy", "Terms & Conditions"]
+let usefull_links = [
+  "Return",
+  "Latest News",
+  "Our Sitemap",
+  "Contact Us",
+  "Privacy",
+  "Terms & Conditions",
+];
 
 export function Footer() {
-
-
-
-    return (
-        <div className="Footer-container  flex">
-            <div className="logo-adress flex flex-col mr-[240px]">
-                <h1 className="text-[30px] mr-[30px]">Medexa</h1>
-                <h2 className="text-[#405071] ml-[180px]">“Your health, our care — anytime, anywhere.”</h2>
-                <ul className="list-disc list-inside mt-5 text-justify ml-[180px] text-[#f8f8f8]">
-                    {my_adress.map((adress, index) => (
-                        <li key={index} className="block ">
-                            {adress.Float}, <br />{adress.name},<br /> {adress.street}, {adress.landmark},<br /> {adress.state} <br /> <strong>{adress.phone}</strong>
-                        </li>
-                    ))}
-                </ul>
-            </div>
-            <div className="mr-[130px] ">
-                    <h1 className="text-[25px]">SERVICES</h1>
-                <ul className="text-[#012E40]">
-                    {services.map((service, index) => (
-
-                        <li key={index}>{service}</li>
-
-                    ))}
-                </ul>
-                
-
-            </div>
-            <div className="mr-[120px]" >
-                <h1 className="text-[25px]">USEFULL LINKS</h1>
-                <ul className="text-[#012E40]">
-                    {usefull_links.map((links,index)=>(
-                        <li key={index}>{links}</li>
-                    ))}
-                </ul>
-            </div>
+  return (
+    <footer className="bg-[#012E40] text-white py-10 mt-20">
+      <div className="container mx-auto flex justify-between px-10">
+        {/* Logo + Address */}
+        <div>
+          <h1 className="text-[30px] font-bold">Medexa</h1>
+          <h2 className="text-[#F7C331] mt-2">
+            “Your health, our care — anytime, anywhere.”
+          </h2>
+          <ul className="mt-5 space-y-2 text-sm">
+            {my_adress.map((adress, index) => (
+              <li key={index}>
+                {adress.Float}, <br />
+                {adress.name}, <br />
+                {adress.street}, {adress.landmark}, <br />
+                {adress.state} <br />
+                <strong>{adress.phone}</strong>
+              </li>
+            ))}
+          </ul>
         </div>
-    )
+
+        {/* Services */}
+        <div>
+          <h1 className="text-[25px] mb-3 font-semibold">Services</h1>
+          <ul className="space-y-2 text-[#F7C331]">
+            {services.map((service, index) => (
+              <li key={index}>{service}</li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Useful Links */}
+        <div>
+          <h1 className="text-[25px] mb-3 font-semibold">Useful Links</h1>
+          <ul className="space-y-2 text-[#F7C331]">
+            {usefull_links.map((link, index) => (
+              <li key={index}>{link}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </footer>
+  );
 }
