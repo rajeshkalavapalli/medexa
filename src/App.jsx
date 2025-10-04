@@ -7,6 +7,8 @@ import './style/navbar.css'
 import { Navbar1 } from './components/Navbar1'
 import { Footer } from './components/Footer'
 import './style/Footer.css'
+import { Navbar2 } from './components/Navbar2'
+import './style/nav2.css'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,6 +17,7 @@ function App() {
     <div>
       <Navbar/>
       <Navbar1/>
+      <Navbar2/>
 
       <Footer/>
     </div>

@@ -33,7 +33,7 @@ export function Footer() {
             </div>
             <div className="mr-[130px] ">
                     <h1 className="text-[25px]">SERVICES</h1>
-                <ul>
+                <ul className="text-[#012E40]">
                     {services.map((service, index) => (
 
                         <li key={index}>{service}</li>
@@ -45,9 +45,9 @@ export function Footer() {
             </div>
             <div className="mr-[120px]" >
                 <h1 className="text-[25px]">USEFULL LINKS</h1>
-                <ul>
+                <ul className="text-[#012E40]">
                     {usefull_links.map((links,index)=>(
-                        <li>{links}</li>
+                        <li key={index}>{links}</li>
                     ))}
                 </ul>
             </div>
