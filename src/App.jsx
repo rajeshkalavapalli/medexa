@@ -11,6 +11,7 @@ import { Navbar2 } from './components/Navbar2'
 import './style/nav2.css'
 import { Header } from './components/header'
 import './style/header.css'
+import { Hospital } from './components/hospital'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,6 +22,7 @@ function App() {
       <Navbar1/>
       <Navbar2/>
       <Header/>
+      <Hospital/>
       <Footer/>
     </div>
   )

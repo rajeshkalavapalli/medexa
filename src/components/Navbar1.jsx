@@ -17,7 +17,7 @@ export function Navbar1() {
                 <div className="login-main flex self-center ">
                     <div>
                         <div className="booking flex  gap-9">
-                            <h1>Booking:+91-9866667073</h1>
+                            <h1>Booking:9866667073</h1>
                             <h1>Login/Register</h1>
                             <h1>cart</h1>
                         </div>
