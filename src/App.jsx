@@ -12,19 +12,44 @@ import './style/nav2.css'
 import { Header } from './components/header'
 import './style/header.css'
 import { Hospital } from './components/hospital'
+import { BrowserRouter, Routes,Route,Link } from 'react-router-dom'
+import MyHome from './pages/MyHome.jsx'
+import { Booklabtest } from './pages/BookLabtest.jsx'
+import { BookNursingService } from './pages/BookNursingService.jsx'
+import { DoctorConsult } from './pages/DoctorConsult.jsx'
+import { HealthPackage } from './pages/HealthPackages.jsx'
+import { ScrollToTop } from './pages/ScrollToTop.jsx'
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
-    <div>
+    <BrowserRouter>
+      <div>
+        <ScrollToTop />
       <Navbar/>
       <Navbar1/>
       <Navbar2/>
-      <Header/>
-      <Hospital/>
-      <Footer/>
+   
+      
     </div>
+      <nav>
+        {/* <Link to='/'>
+        </Link> */}
+        {/* <Link to='/BookLabtest'>Book lab test</Link> */}
+      </nav>
+      <Routes>
+          <Route path='/' element={<MyHome/>}/>
+          <Route path='/book-lab-test' element={<Booklabtest/>}/>
+          <Route path="/book-nursing-service" element={<BookNursingService />} />
+          <Route path="/doctor-consultation" element={<DoctorConsult />} />
+          <Route path="/health-packages" element={<HealthPackage />} />
+      </Routes>
+
+      <Footer/>
+    </BrowserRouter>
+    
   )
 }
 

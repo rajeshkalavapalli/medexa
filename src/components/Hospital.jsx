@@ -111,9 +111,9 @@ export function Hospital () {
             </div>
             <div>
                 <div className="popular-hospitals flex gap-7 list-none h-55 mt-6">
-                   {PopularHospitals.map((hospital,index)=>(
-                    <ul>
-                        <li key={index}>
+                   {PopularHospitals.map((hospital)=>(
+                    <ul key={hospital.id}>
+                        <li >
                             {hospital.name}
                         </li>
                     </ul>
@@ -121,6 +121,16 @@ export function Hospital () {
 
                 
                 </div>
+            </div>
+
+            <div className="mt-8">
+                <h1 className="medical-tag text-2xl font-bold text-center text-[#012E40] relative z-10 mr-20">Popular hospital and labs in india</h1>
+
+                  {PopularDiagnosticLabs.map((labs)=>(
+                    <ul key={labs.id}>
+                      <li >{labs.name}</li>
+                    </ul>
+                  ))}
             </div>
             <div>
                 <div>
