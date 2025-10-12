@@ -1,4 +1,6 @@
 import DoctorConsultimg from '../assets/images/doctor_consult.png';
+import DoctorList from '../services/DoctorList';
+
 
 export function DoctorConsult() {
   return (
@@ -16,6 +18,11 @@ export function DoctorConsult() {
           className="w-full h-full object-cover object-top rounded-2xl shadow-lg"
         />
       </div>
+
+      <div>
+        <DoctorList/>
+      </div>
     </div>
+    
   );
 }

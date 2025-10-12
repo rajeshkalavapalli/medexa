@@ -6,13 +6,11 @@ import consult1 from "../assets/images/consult1.png";
 import labtest1 from "../assets/images/labtest1.png";
 import nursing1 from "../assets/images/nursing1.png";
 
-const services = [
-  { img: consult, route: "/doctor-consultation" },
-  { img: lab, route: "/book-lab-test" },
-  { img: nursing, route: "/book-nursing-service" }
-];
+// Top images (no routing, only animations)
+const topImages = [consult, lab, nursing];
 
-const services1 = [
+// Bottom images (with routing)
+const bottomServices = [
   { img: consult1, route: "/doctor-consultation" },
   { img: labtest1, route: "/book-lab-test" },
   { img: nursing1, route: "/book-nursing-service" }
@@ -21,16 +19,16 @@ const services1 = [
 export function Header() {
   return (
     <div className="header-container mt-10">
-      {/* Top Images */}
+      
+      {/* Top Images with animation */}
       <div className="flex gap-10 justify-center">
-        {services.map((service, index) => (
-          <Link key={index} to={service.route}>
-            <img
-              src={service.img}
-              alt={`service-${index}`}
-              className="w-74 h-40 object-cover rounded-lg shadow-md cursor-pointer"
-            />
-          </Link>
+        {topImages.map((img, index) => (
+          <img
+            key={index}
+            src={img}
+            alt={`top-service-${index}`}
+            className="w-74 h-40 object-cover rounded-lg shadow-md transform transition-transform duration-500 hover:scale-105"
+          />
         ))}
       </div>
 
@@ -41,13 +39,13 @@ export function Header() {
         </h1>
       </div>
 
-      {/* Bottom Images */}
+      {/* Bottom Images with routing */}
       <div className="flex gap-10 justify-center mt-7">
-        {services1.map((service, index) => (
+        {bottomServices.map((service, index) => (
           <Link key={index} to={service.route}>
             <img
               src={service.img}
-              className="w-72 h-43 object-cover rounded-lg shadow-md cursor-pointer"
+              className="w-72 h-43 object-cover rounded-lg shadow-md cursor-pointer transform transition-transform duration-500 hover:scale-105"
             />
           </Link>
         ))}
