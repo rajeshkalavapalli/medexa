@@ -1,0 +1,17 @@
+.Footer-container{
+    position: fixed; 
+    
+    bottom: 0; 
+    
+    left: 0; 
+    right: 0; 
+    width: 100%; 
+    
+    background: linear-gradient( to left, #6B7A8F,#F7882F,#F7C331);
+    
+   
+    z-index: 999; 
+    
+    padding: 15px 0; 
+    text-align: center;
+}
