@@ -16,10 +16,9 @@ import { BrowserRouter, Routes,Route,Link } from 'react-router-dom'
 import MyHome from './pages/MyHome.jsx'
 import { Booklabtest } from './pages/BookLabtest.jsx'
 import { BookNursingService } from './pages/BookNursingService.jsx'
-import { DoctorConsult } from './pages/DoctorConsult.jsx'
 import { HealthPackage } from './pages/HealthPackages.jsx'
 import { ScrollToTop } from './pages/ScrollToTop.jsx'
-import BookDoctorAppointment from "./pages/BookDoctorAppointment.jsx";
+import DoctorConsult from './pages/DoctorConsult';
 
 
 
@@ -48,8 +47,7 @@ function App() {
           <Route path="/book-nursing-service" element={<BookNursingService />} />
           <Route path="/doctor-consultation" element={<DoctorConsult />} />
           <Route path="/health-packages" element={<HealthPackage />} />
-          <Route path="/book-doctor-appointment" element={<BookDoctorAppointment />} />
-
+          
       </Routes>
 
       <Footer/>
